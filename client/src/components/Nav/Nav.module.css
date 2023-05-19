@@ -1,0 +1,144 @@
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  background-color: #b016169c;
+  flex-direction: row;
+}
+
+.left,
+.center,
+.right {
+  display: flex;
+  gap: 10rem;
+}
+
+.navLink {
+  text-decoration: none;
+  display: flex;
+    color: #f5dede;
+    border-color: #b016169c;
+    border-radius: 15%;
+    cursor: pointer;
+    font-family: 'myFont2';
+    align-items: center;
+    align-content: center;
+}
+
+.navLink:hover{
+  font-size: 18px;
+  color: #f5dede;
+
+}
+.searchBar {
+  width: 200px; /* Ajusta el ancho según tus necesidades */
+  padding: 5px;
+}
+.img{
+  width: 200px; /* Ajusta el ancho según tus necesidades */
+}
+/* .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b016169c;
+    padding: 10px;
+  }
+  
+  .btnLeave {
+    display: flex;
+    color: rgba(235, 234, 235, 0.715);
+    background-color: rgba(102, 3, 3, 0.733);
+    border-color: rgba(102, 3, 3, 0.733);
+    border-radius: 15%;
+    cursor: pointer;
+    font-family: 'myFont2';
+    align-items: center;
+    align-content: center;
+  }
+  
+  .btnLeave:hover {
+    font-size: 15px;
+    color: rgb(240, 235, 245);
+    background-color: rgba(198, 15, 15, 0.733);
+    border-color: rgb(240, 235, 245);
+  }
+  .nav a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+  }
+  
+  .nav a:hover {
+    color: #ffffff;
+    text-shadow: 10px 20px 30px;
+  }
+  
+  .nav .text {
+    margin-right: 200px;
+  }
+
+  @media screen and (max-width: 700px) {
+    .nav {
+        width: 100%;
+        padding-top: 17px;
+        padding-bottom: 17px;
+    }
+    
+    .text {
+
+        font-weight: normal;
+        font-size: 18px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+} */
+/* !!!! */
+/* .nav {
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    justify-content: space-around;
+    background-color: #2E0A76;
+    padding-top: 12px;
+    padding-bottom: 15px;
+}
+
+.text {
+    font-family: 'myFont2';
+    font-weight: bold;
+    font-size: 30px;
+    color: #ecc5f1;
+}
+
+a:-webkit-any-link {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+
+@font-face {
+    font-family: 'myFont2';
+    src: url('../../fontsType/Perfect\ DOS\ VGA\ 437.ttf');
+  }
+
+ 
+
+@media screen and (max-width: 700px) {
+    .nav {
+        width: 100%;
+        padding-top: 17px;
+        padding-bottom: 17px;
+    }
+    
+    .text {
+
+        font-weight: normal;
+        font-size: 18px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+} */

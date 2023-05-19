@@ -5,11 +5,10 @@ module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define('videogame', {
     id: {
-      type: DataTypes.UUID,
-      defaultValue: DataTypes.UUIDV4,
+      type: DataTypes.STRING,
+      defaultValue: function(){return "U" + Date.now()+"u"},
       allowNull: false,
-      primaryKey: true,
-      unique: true
+      primaryKey: true
     },
     name: {
       type: DataTypes.STRING,
@@ -20,28 +19,26 @@ module.exports = (sequelize) => {
       allowNull: false,
     },
     released: {
-      type: DataTypes.DATEONLY,
-      allowNull: true,
+      type: DataTypes.STRING
     },
     rating: {
-      type: DataTypes.FLOAT,
-      allowNull: true,
+      type: DataTypes.DECIMAL,
     },
     platforms: {
-      type: DataTypes.STRING,
+      type: DataTypes.ARRAY(DataTypes.STRING),
       allowNull: false,
     },
     image: {
       type: DataTypes.STRING,
       allowNull: false,
+    },
+    createdInDb: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: true
     }
+  },
+  {
+    timestamps: false
   });
 };
-/*
-Name. *
-Description. *
-platforms. *
-Image. *
-Release date. *
-Rating. 
-*/

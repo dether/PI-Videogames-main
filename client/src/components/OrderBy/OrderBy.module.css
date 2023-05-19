@@ -1,0 +1,47 @@
+.divContainer{
+    display: flex; 
+}
+
+.select {
+    width: 180px;
+    background-color: #f5dede;
+    border-color: rgba(102, 3, 3, 0.733);
+    border-width: 2px;
+}
+
+
+
+/* @media screen and (max-width: 700px) {
+
+    .divSort {
+        display: flex;
+        margin-right: 18px;
+    }
+
+    .titles {
+        font-size: 18px;
+        font-weight: normal;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        text-align: start;
+    }
+
+    .subTitles {
+        font-weight: normal;
+        font-size: 16px;
+    }
+
+    .selects {
+        width: 75px;
+        font-size: 11px;
+        border-width: 2px;
+    }
+
+    .divName {
+        margin-left: 0px;
+    }
+
+    .divRating {
+        margin-left: 0px;
+    }
+}  */

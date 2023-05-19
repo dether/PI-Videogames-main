@@ -1,0 +1,108 @@
+.card {
+  background:url(https://i.pinimg.com/564x/eb/31/d0/eb31d0724caea8db5b1d4202897138db.jpg);
+  background-size: cover;
+  border-radius: 18px;
+  box-shadow: 10px 10px 5px 5px rgba(100, 100, 100, 0.418);
+  overflow: hidden;
+  height: 500px;
+  width: 430px;
+}
+
+.card:hover {
+  transform: translateY(-3%);
+  background:url(https://i.pinimg.com/564x/2d/89/6f/2d896fb0a1350881d981b6fc6fa0ffd1.jpg);
+  
+}
+
+.cards_item {
+  display: flex;
+  padding: 10px;
+}
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+.name {
+  color: #f5dede;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-family: "Staatliches", sans-serif;
+  text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+.title {
+  font-size: 18px;
+  color: #f5dede;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+  padding-left: 6px;
+  padding-right: 6px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  text-decoration: none;
+}
+
+.imgs {
+  height: 241px;
+  width: 430px;
+
+}
+
+.afterImg {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text {
+  color:#f5dede;
+  font-size: 1.3rem;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  font-family: "Red Hat Display", sans-serif;
+  text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+.rating {
+  margin-right: 13px;
+  padding: 20.5px;
+  margin-top: 8px;
+  margin-bottom: 18px;
+  font-weight: bold;
+  color: black;
+  border-radius: 10%;
+  border: 1px solid #00ff3c;
+  height: 25px;
+}
+
+.btnDelete {
+  background-color: #ff000086;
+  border-color: #000000;
+  width: 20%;
+  height: 28px;
+  color: #000000a2;
+  font-weight: bold;
+  cursor: pointer;
+}
+.btnDelete:hover {
+  background-color: rgba(198, 15, 15, 0.899);
+  border-color: #d7c5c5;
+  width: 20%;
+  height: 28px;
+  color: #000000;
+  font-weight: bold;
+  cursor: pointer;
+}
+@media screen and (max-width: 700px) {
+  
+  .card {
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+}

@@ -5,9 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  background-color: rgba(34, 31, 31, 0.853);
+  background-image: url('https://wallpaperaccess.com/full/4630784.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; /* o contain */
+  background-attachment: fixed;
 }

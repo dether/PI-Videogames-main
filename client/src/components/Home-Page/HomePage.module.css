@@ -1,0 +1,203 @@
+.titles {
+  font-family: 'myFont2';
+  font-size: 30px;
+  color: rgb(220, 212, 245);
+  margin-top: 35px;
+  text-align: center;
+}
+
+.fadeIn {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 1;
+  z-index: 9999;
+  animation-name: fadeInAnimation;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.cardsAndFilters{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  
+  }
+
+  .containerCards{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 1rem;
+    padding: 20px 0;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+  .holi{
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row-reverse;
+}
+
+.btn {
+  color: rgb(255, 255, 255);
+  background-color: rgba(102, 3, 3, 0.733);
+  border-color: rgb(0, 0, 0);
+  border-width: 2px;
+  border-radius: 10%;
+  cursor: pointer;
+  padding-left: 5px;
+  margin-left: 5px;
+  font-size: 20px;
+}
+
+.btn:hover {
+  color: rgb(240, 235, 245);
+  background-color: rgba(198, 15, 15, 0.733);
+  border-color: rgb(240, 235, 245);
+}
+
+
+
+.secondColumn {
+  display: flex;
+  flex-direction: column;
+  /* Otros estilos para la segunda columna aquí */
+}
+
+.title {
+  font-family: 'myFont2';
+  font-size: 30px;
+  color: rgb(220, 212, 245);
+  margin-top: 35px;
+  text-align: center;
+}
+
+.home{
+  display: flex;
+}
+
+.btnLeave {
+  display: flex;
+  color: rgba(235, 234, 235, 0.715);
+  background-color: rgba(102, 3, 3, 0.733);
+  border-color: rgba(102, 3, 3, 0.733);
+  border-width: 2px;
+  border-radius: 50%;
+  cursor: pointer;
+  padding-left: 5px;
+  margin-left: 998px;
+  margin-top: 360px;
+  font-family: 'myFont2';
+  font-size: 25px;
+  position: fixed;
+  padding: 15px;
+}
+
+.btnLeave:hover {
+  font-size: 27px;
+  color: rgb(240, 235, 245);
+  background-color: rgba(198, 15, 15, 0.733);
+  border-color: rgb(240, 235, 245);
+}
+
+
+.divCards {
+  display: grid;
+  flex-direction: row;
+  justify-content: space-around;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+  width: 100%;
+  margin-left: 90px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.divLoading{
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+.loading {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-left: 470px;
+  padding-top: 100px;
+}
+
+
+
+@media screen and (max-width: 700px) {
+
+  .firstColum {
+      width: 100%;
+      position: fixed;
+      margin-top: 55px;
+      height: auto;
+      display: flex;
+  }
+
+  .btn {
+      padding-left: 5px;
+      margin-left: 25px;
+      margin-right: 20px;
+      margin-top: auto;
+      margin-bottom: auto;
+      font-size: 16px;
+  }
+
+  .btnLeave:hover {
+      font-size: 18px;
+  }
+
+  .secondColum {
+      width: 100%;
+      padding-top: 190px;
+      padding-left: 0px;
+      margin-right: auto;
+      text-align: center; 
+  }
+  
+  .title {
+      font-size: 20px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .divLoading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px; /* Ajusta la altura según tus necesidades */
+    flex-direction: column;
+  }
+  
+  .loading {
+    width: 300px; /* Ajusta el tamaño de la imagen de carga */
+    height: 300px;
+  }
+
+  .divCards {
+      grid-template-columns: repeat(1, 1fr);
+      margin-left: 0px
+  }
+}

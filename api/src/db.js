@@ -7,7 +7,7 @@ const { DB_USER, DB_PASSWORD, DB_HOST,} = process.env;
 const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/videogames`, {
   logging: false, // set to console.log to see the raw SQL queries // se utiliza para imprimir consultas SQL en la consola (si se establece en true)
   native: false, // lets Sequelize know we can use pg-native for ~30% more speed // se utiliza para habilitar o deshabilitar el uso de la librería pg-native para mejorar el rendimiento.
-});
+}); 
 const basename = path.basename(__filename);
 
 const modelDefiners = [];

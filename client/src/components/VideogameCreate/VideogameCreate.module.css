@@ -1,0 +1,190 @@
+.divGeneral {
+  display: flex;
+}
+
+.divCreate {
+  margin-top: 105px;
+  background-color: rgba(102, 3, 3, 0.733);
+  border: 2px solid rgba(198, 15, 15, 0.733);
+  border-radius: 5%;
+  margin-right: auto;
+  margin-left: auto; 
+}
+
+.fadeOut {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9999;
+  animation-name: fadeOutAnimation;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeOutAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.title {
+  color: #f5dede;
+  font-family: 'myFont2';
+  font-weight: lighter;
+}
+
+.data {
+  display: flex;
+  text-align: start;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.firstColumn {
+  padding-right: 20px;
+}
+
+label {
+  color: #f5dede;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 18px;
+}
+
+.input {
+  background-color: #f5dede;
+  border-color: rgba(102, 3, 3, 0.733);
+  border-radius: 8%;
+  font-size: 15px;
+  font-family: monospace;
+  width: 190px;
+}
+
+.inputDescription {
+  height: 85px;
+  width: 190px;
+  background-color: #f5dede;
+  border-color: rgba(102, 3, 3, 0.733);
+  font-size: 15px;
+}
+
+.selectGenres {
+  background-color: #f5dede;
+  border-color: rgba(102, 3, 3, 0.733);
+  border-radius: 8%;
+  font-size: 15px;
+  font-family: monospace;
+  width: 190px;
+}
+
+.secondColumn {
+  padding-right: 20px;
+}
+
+.divMultiSelect {
+  display: flex;
+  margin-top: 10px;
+}
+
+.multiSelect {
+  color: #f5dede;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.btnMultiSelect {
+  height: 20px;
+  margin-left: 5px;
+  background-color: rgba(198, 15, 15, 0.733);
+  color: #f5dede;
+  border-color: #f5dede;
+  font-family: monospace;
+}
+
+.btn {
+  color: #f5dede;
+  background-color: rgba(102, 3, 3, 0.733);
+  border-color: #f5dede;
+  border-width: 2px;
+  border-radius: 10%;
+  cursor: pointer;
+  padding-left: 5px;
+  margin-left: 2px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-family: 'myFont2';
+  font-size: 30px;
+}
+
+.btn:hover {
+  color: #f5dede;
+  background-color: rgba(198, 15, 15, 0.733);
+  border-color: rgba(102, 3, 3, 0.733);
+}
+
+
+
+
+@media screen and (max-width: 700px) {
+
+  .divCreate {
+      margin-top: 85px;
+      margin-bottom: 20px;
+      width: 80%;
+  }
+  
+  .title {
+      font-size: 22px;
+  }
+  
+  .data {
+      display: block;
+      padding-left: auto;
+      padding-right: 0px;
+  }
+
+  label {
+      font-size: 17px;
+  }
+
+  .input {
+      width: 95%;
+      font-size: 12px;
+  }
+
+  .firstColumn {
+      margin-bottom: 20px;
+  }
+
+  .secondColumn {
+      margin-bottom: 20px;
+  }
+
+  .inputDescription {
+      height: 60px;
+      width: 95%;
+      font-size: 12px;
+  }
+
+  #inputRating {
+      width: 88%;
+  }
+
+  .selectGenres {
+      width: 90%;
+  }
+
+  .btn {
+      margin-top: 35px;
+      margin-bottom: 30px;
+      font-size: 20px;
+  }
+
+}
