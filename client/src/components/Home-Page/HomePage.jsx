@@ -25,6 +25,7 @@ export default function HomePage() {
   const [orderBy, setOrderBy] = useState("");
   const [filters, setFilters] = useState({});
   const [fade, setFade] = useState(true);
+  const [isResetDisabled, setIsResetDisabled] = useState(true); // Estado para controlar si el botón de reset está habilitado o no
 
   const indexOfLastVideogame = currentPage * videogamesPerPage; // 15
   const indexOfFirstVideogame = indexOfLastVideogame - videogamesPerPage; // 0
@@ -43,7 +44,7 @@ export default function HomePage() {
   useEffect(() => {
     setTimeout(() => {
       setFade(false); // Desactiva la animación de desvanecimiento después de 5 segundos
-    }, 5000);
+    }, 3000);
   }, []); 
 
   const pagination = (pageNumber) => {
@@ -57,12 +58,14 @@ export default function HomePage() {
 
   function handleClick(e) {
     e.preventDefault();
+    dispatch(getVideogames());
     setReset(true);
     setNamechange("");
     setRatingchange("");
     setGenrechange("");
     setCurrentPage(1);
     setSource("All");
+    setIsResetDisabled(true); // Deshabilitar el botón de reset nuevamente
   }
 
   function handlerGenres(e) {
@@ -72,6 +75,7 @@ export default function HomePage() {
     setSource("All");
     setGenrechange(e.target.value);
     setOrder("Order" + e.target.value)
+    setIsResetDisabled(false);
   }
 
   function handlerCreated(e) {
@@ -81,6 +85,7 @@ export default function HomePage() {
     setCurrentPage(1);
     setGenrechange("");
     setOrder("Order" + e)
+    setIsResetDisabled(false);
   }
 
   function handlerByName(e) { //no puedo pasar un estado local a otro componente?
@@ -89,6 +94,7 @@ export default function HomePage() {
     setRatingchange("");
     setNamechange(e.target.value);
     setOrder("Order" + e.target.value)
+    setIsResetDisabled(false);
   }
 
   function handlerByRating(e) {
@@ -97,10 +103,11 @@ export default function HomePage() {
     setNamechange("");
     setRatingchange(e.target.value);
     setOrder("Order" + e.target.value);
+    setIsResetDisabled(false);
   }
 
   return (
-    <div>
+     <div>
       {fade && <div className={s.fadeIn}></div>} {/* Agrega la clase fadeIn cuando fade es verdadero */}
       {/* Resto del código... */} 
       <Nav
@@ -108,12 +115,12 @@ export default function HomePage() {
         handlerCreated={handlerCreated}
         handlerByName={handlerByName}
         handlerByRating={handlerByRating}
-      />
+      /> //class
       <p class={s.title}>Filters</p>
       <div className={s.cardsAndFilters}>
 
         <div className={s.holi}>
-          <button onClick={e => { handleClick(e) }} className={s.btn}>
+          <button onClick={e => { handleClick(e) }} disabled={isResetDisabled} className={`${s.btn} ${isResetDisabled && s.disabled}`}>
             RESET
           </button>
           <OrderBy handlerByName={handlerByName} handlerByRating={handlerByRating} namechange={namechange} ratingchange={ratingchange} />

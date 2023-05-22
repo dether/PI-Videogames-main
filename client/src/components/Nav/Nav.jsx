@@ -1,62 +1,37 @@
 import React, { useState, useEffect } from 'react';
 import SearchBar from '../SearchBar/SearchBar'
 import s from './Nav.module.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
-export default function Nav({
-  handlerGenres,
-  handlerCreated,
-  handlerByName,
-  handlerByRating,
-  source,
-  genrechange,
-}) {
-
-  const [navReset, setNavReset] = useState(false);
-  const [navOrderBy, setNavOrderBy] = useState("");
-  const [navFilters, setNavFilters] = useState({});
-
-  useEffect(() => {
-    if (navReset) {
-      setNavReset(false);
-    }
-  }, [navReset]);
-
-  useEffect(() => {
-    if (source === "All") {
-      setNavFilters({});
-    }
-  }, [source]);
-
-  useEffect(() => {
-    if (genrechange) {
-      setNavFilters((prevFilters) => ({
-        ...prevFilters,
-        genre: genrechange,
-      }));
-    }
-  }, [genrechange]);
+export default function Nav() {
+  const location = useLocation();
 
   return (
     <nav className={s.nav}>
-      <div className={s.left}>
-        <Link to="/" className={s.navLink}>
-          HOME
-          {/* <img className={s.img} src="https://fontmeme.com/temporary/217d514ec9bb0d3cd1514cd3bcbbe938.png"/> */}
-        </Link>
-        <Link to="/videogames" className={s.navLink}>
+      <Link to="/" className={s.logo}>
+        <img
+          src="ruta-del-logo.png"
+          alt="YourGames Logo"
+          className={s.miniLogo}
+        />
+        YourGames
+      </Link>
+      <div className={s.menu}>
+        <Link
+          to="/videogames"
+          className={location.pathname === "/videogames" ? s.active : ""}
+        >
           CREATE
         </Link>
-      </div>
-      <div className={s.center}>
         <SearchBar/>
-      </div>
-      <div className={s.right}> 
-        <Link to="/about" className={s.navLink}>
-          ABOUT
+        <Link
+          to="/about"
+          className={location.pathname === "/about" ? s.active : ""}
+        >
+          About
         </Link>
-        <Link to="/" className={s.navLink}>
-          EXIT
+        <Link to="/" className={s.exit}>
+          Exit
         </Link>
       </div>
     </nav>

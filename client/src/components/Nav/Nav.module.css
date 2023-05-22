@@ -1,43 +1,75 @@
 .nav {
+  position: flex;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  padding: 0 10px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  background-color: #b016169c;
-  flex-direction: row;
+  height: 60px;
+  background-color: rgba(198, 15, 15, 0.733);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
 }
 
-.left,
-.center,
-.right {
+.logo {
   display: flex;
-  gap: 10rem;
-}
-
-.navLink {
+  align-items: center;
+  font-weight: bold;
+  color: #000000;
   text-decoration: none;
+  margin-right: 10px;
+}
+
+.miniLogo {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.menu {
   display: flex;
-    color: #f5dede;
-    border-color: #b016169c;
-    border-radius: 15%;
-    cursor: pointer;
-    font-family: 'myFont2';
-    align-items: center;
-    align-content: center;
+  align-items: center;
+  margin-left: 100px;
 }
 
-.navLink:hover{
-  font-size: 18px;
-  color: #f5dede;
+.menu a {
+  margin: 0 100px;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+}
 
+.menu a:hover {
+  color: #f3f3f3;
 }
-.searchBar {
-  width: 200px; /* Ajusta el ancho según tus necesidades */
-  padding: 5px;
+
+.menu a.active {
+  color: #ff0000;
 }
-.img{
-  width: 200px; /* Ajusta el ancho según tus necesidades */
+
+.exit {
+  margin-left: 10px;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
 }
+
+@media screen and (max-width: 700px) {
+  .logo {
+    margin-right: 10px;
+  }
+
+  .menu {
+    margin-left: 10px;
+  }
+
+  .searchForm {
+    margin-right: 5px;
+  }
+}
+
 /* .nav {
     display: flex;
     justify-content: center;

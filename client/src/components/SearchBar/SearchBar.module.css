@@ -1,3 +1,35 @@
+.searchForm {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+  
+  .searchInput {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px;
+  }
+  
+  .searchButton {
+    color: rgba(0, 0, 0, 0.733);
+    background-color: #00000060;
+    border-color: rgba(102, 3, 3, 0.733);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+
+  .searchButton:hover {
+    color: #000000;
+    background-color: rgb(247, 247, 247);
+    border-color: rgb(9, 9, 9);
+}
+
+
+
+/* 
 .formClass {
     margin-top: auto;
     margin-bottom: auto;
@@ -38,4 +70,4 @@
         font-size: 14px; 
     }
 
-}
+} */

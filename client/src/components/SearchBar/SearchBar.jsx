@@ -20,20 +20,20 @@ function handlerSubmit(e) {
 }
 
 return (
-    <div className={s.formClass}>
-        <form onSubmit={(e) => handlerSubmit(e)}>
-            <input
-            type="text"
-            placeholder="Search a videogame..."
-            value={name}
-            onChange={(e) => handlerChange(e)}
-            className={s.input}
-            />
+  <div className={s.searchForm}>
+      <form onSubmit={(e) => handlerSubmit(e)}>
+          <input
+          type="text"
+          placeholder="Search a videogame..."
+          value={name}
+          onChange={(e) => handlerChange(e)}
+          className={s.searchInput}
+          />
 
-            <button type="submit" className={s.btn}>Search</button>
-        </form>
-        
-    </div>
+          <button type="submit" className={s.searchButton}>Search</button>
+      </form>
+      
+  </div>
 )
 }
 /* import { useSelector } from "react-redux";

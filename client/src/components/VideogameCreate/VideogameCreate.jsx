@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { postVideogames, getGenres } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import s from "./VideogameCreate.module.css";
-import Nav from "../Nav/Nav";
+
 
 export default function VideogameCreate() {
   const dispatch = useDispatch();
