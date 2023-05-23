@@ -45,7 +45,7 @@ export default function HomePage() {
   useEffect(() => {
     setTimeout(() => {
       setFade(false); // Desactiva la animación de desvanecimiento después de 5 segundos
-    }, 5000);
+    }, 2500);
   }, []);
 
   const pagination = (pageNumber) => {
@@ -135,7 +135,7 @@ export default function HomePage() {
                 {currentVideogames.map(el => {
                   return (
                     <div key={el.id}>
-                      <Card name={el.name} genres={el.genres} image={el.image ? el.image : "imgDefault"} rating={el.rating} id={el.id} createdInDb={el.createdInDb} />
+                      <Card name={el.name} genres={el.genres} image={el.image ? el.image : "imgDefault"} rating={el.rating} id={el.id} createdInDb={el.createdInDb} screenshots={el.screenshots}/>
                     </div>
                   );
                 })}

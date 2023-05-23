@@ -1,14 +1,13 @@
 const { DataTypes } = require('sequelize');
-// Exportamos una funcion que define el modelo
-// Luego le injectamos la conexion a sequelize.
+// Exportamos una función que define el modelo y le inyecta la conexión a Sequelize.
 module.exports = (sequelize) => {
-  // defino el modelo
+  // Definimos el modelo 'genre' en la base de datos.
   sequelize.define('genre', {
     name: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING, // El tipo de dato es una cadena de texto.
     },
   },
   {
-    timestamps: false
+    timestamps: false // Desactivamos la creación automática de timestamps (createdAt y updatedAt).
   });
 };

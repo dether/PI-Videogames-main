@@ -2,15 +2,16 @@
   background:url(https://i.pinimg.com/564x/eb/31/d0/eb31d0724caea8db5b1d4202897138db.jpg);
   background-size: cover;
   border-radius: 18px;
-  box-shadow: 10px 10px 5px 5px rgba(114, 20, 20, 0.828);
+  box-shadow: 10px 10px 5px 5px rgba(0, 0, 0, 0.418);
   overflow: hidden;
-  height: 500px;
-  width: 430px;
+  height: 400px;
+  width: 330px;
 }
 
 .card:hover {
   transform: translateY(-3%);
   background:url(https://i.pinimg.com/564x/2d/89/6f/2d896fb0a1350881d981b6fc6fa0ffd1.jpg);
+  box-shadow: 10px 10px 5px 5px rgba(189, 30, 30, 0.418);
   
 }
 
@@ -27,7 +28,7 @@ a:active {
 
 .name {
   color: #f5dede;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: bold;
   text-transform: capitalize;
   font-family: "Staatliches", sans-serif;
@@ -48,8 +49,8 @@ a:active {
 }
 
 .imgs {
-  height: 241px;
-  width: 430px;
+  height: 191px;
+  width: 330px;
 
 }
 

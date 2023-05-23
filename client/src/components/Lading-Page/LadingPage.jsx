@@ -20,7 +20,7 @@ export default function LadingPage() {
 
     setTimeout(() => {
       navigate("/home");
-    }, 4000); // Espera 1 segundo antes de redirigir
+    }, 3500); // Espera 1 segundo antes de redirigir
   }
 
   return (

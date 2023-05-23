@@ -43,16 +43,16 @@ export default function CardDetail() {
                             <p>
                                 🎭 Genres: <span>{Array.isArray(detailVideogame.genres) ? detailVideogame.genres.join(", ") : detailVideogame.genres}</span>
                             </p>
-                        </div>
-                    </div>
-
-                </div>
-
                 <div className={s.divBack}> 
                     <Link to = "/home">
                         <button className={s.btn}>BACK</button>
                     </Link>
                 </div>
+                        </div>
+                    </div>
+
+                </div>
+
 
             </div> 
             :  

@@ -84,7 +84,7 @@ export default function VideogameCreate() {
 
     setTimeout(() => {
       navigate("/home");
-    }, 5000); // Espera 5 segundos antes de redirigir
+    }, 3500); // Espera 5 segundos antes de redirigir
 
   }
 

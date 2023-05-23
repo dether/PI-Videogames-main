@@ -25,13 +25,13 @@ export default function Nav() {
         to="/about"
         className={location.pathname === "/about" ? s.active : ""}
         >
-        About
+        ABOUT
       </Link>
       <SearchBar />
         </div>
       <div className={s.menu}>
         <Link to="/" className={s.exit}>
-          Exit
+          EXIT
         </Link>
       </div>
     </nav>

@@ -1,17 +1,21 @@
 .divGeneral {
   display: flex;
   flex-direction: column;
-  /* width: 100%; */
-  padding: 1%;
+
+  padding: 0.1%;
+
+
 }
 
 .div {
   background-color: #6d0505;
   /*background:url(https://i.pinimg.com/564x/2d/89/6f/2d896fb0a1350881d981b6fc6fa0ffd1.jpg);*/
+  margin: 100px;
   border: 2px solid #ec1313;
   border-radius: 5%;
   display: inline-block;
-  margin-top: 30px;
+  margin-top: 3px; 
+  
 }
 
 .title {
@@ -38,15 +42,13 @@
 }
 
 .img {
-  width: 650px;
-  height: 350px;
+  width: 420px;
+  height: 250px;
 
 }
 
 .info {
   color: white;
-  padding-right: 25px;
-  padding-left: 25px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-align: justify;
   padding: 5%;

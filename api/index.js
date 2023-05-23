@@ -17,12 +17,16 @@
 //     =====`-.____`.___ \_____/___.-`___.-'=====
 //                       `=---='
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-const server = require('./src/app.js');
-const { conn } = require('./src/db.js');
+const server = require('./src/app.js'); // Importamos el servidor desde el archivo app.js
+const { conn } = require('./src/db.js'); // Importamos la conexión a la base de datos desde el archivo db.js
 
-// Syncing all the models at once.
+/* Sincronizamos todos los modelos a la vez.
+Sincronizamos todos los modelos de la base de datos. 
+La opción force:true indica que se deben eliminar y recrear 
+las tablas en la base de datos cada vez que se sincronice. 
+Esto puede ser útil durante el desarrollo, pero en producción se debe utilizar con precaución.*/
 conn.sync({ force: true }).then(() => {
   server.listen(3001, () => {
-    console.log('%s listening at 3001'); // eslint-disable-line no-console
+    console.log('%s listening at 3001'); // Imprimimos un mensaje en la consola indicando que el servidor está escuchando en el puerto 3001
   });
 });

@@ -4,7 +4,7 @@ import { deleteVideogame } from "../../redux/actions";
 import { getVideogames } from "../../redux/actions";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-
+ 
 export default function Card({ name, genres, image, rating, id, createdInDb }) {
   let dispatch = useDispatch();
 
