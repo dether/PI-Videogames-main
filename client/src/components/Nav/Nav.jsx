@@ -8,7 +8,7 @@ export default function Nav() {
 
   return (
     <nav className={s.nav}>
-      <Link to="/" className={s.logo}>
+      <Link to="/home" className={s.logo}>
         <img
           src="https://telegra.ph/file/77bc33b751f616902cc8a.png"
           className={s.miniLogo}

@@ -1,13 +1,16 @@
+.div{
+    display: center;
+}
 .container {
     justify-content: center;
     flex-direction: column;
     display: flex;
     margin: 0rem auto;
     margin-top: 2rem;
-    width: 40%;
-    height: 80vh;
+    width: 90%;
+    height: 88vh;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(148, 143, 143, 0.592);
     border: 1px solid rgb(0, 0, 0);
     border-radius: 1.2rem;
     transition: 2s;
@@ -16,41 +19,69 @@
 }
 
 .container:hover{
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(201, 198, 198, 0.777);
 }
+.title {
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+    font-family:serif ;
+  }
+  
+  .img{
+      width: 7.5rem ;
+      height: 10.2rem;
+      border-radius: 1.5rem;
+      transition: 2s;
+  }
+  
+  .img:hover{
+      box-shadow: 0rem 0rem 1rem rgb(80, 10, 10);
+  }
+  .text {
+    color: #000000;
+    padding-left: 80px;
+    padding-right: 80px;
+    text-align: justify;
+    line-height: 20px;
+    font-weight: 700;
+    font-size: 0.8rem;
+  }
 
-.img{
-    width: 14rem ;
-    height: 17rem;
-    border-radius: 1.5rem;
-    transition: 2s;
-}
+  .divRedes {
+    display: inline-flex;
+    flex-wrap: wrap;
+  }
 
-.img:hover{
-    box-shadow: 0rem 0rem 1rem rgb(233, 16, 16);
-}
-
-.section {
+  .imagenL {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-}
+    width: 52px;
+    height: 52px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  
+  .imagenG {
+    display: flex;
+    width: 52px;
+    height: 52px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+    
+  .textRedes {
+    font-size: 25px;
+    padding-left: 10px;
+    color: #ffffff;
+    font-weight: bold;
+  }
 
-.title{
-    font-size: 2.5rem;
-    color: white;
-    letter-spacing: 0.5rem;
-    font-weight: 500;
-    font-family: fantasy;
-}
 
-.parrafo {
-    color:white;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 1rem;
-    letter-spacing: 1px;
 
-}
+
+
+
+
+
 
 .link{
     text-decoration:solid;

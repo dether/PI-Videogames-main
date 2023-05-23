@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { postVideogames, getGenres } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import s from "./VideogameCreate.module.css";
-
+import Nav from "../Nav/Nav"
 
 export default function VideogameCreate() {
   const dispatch = useDispatch();
@@ -97,6 +97,8 @@ export default function VideogameCreate() {
 
 
   return (
+    <div>
+    <Nav/>
     <div className={s.divGeneral}>
 {fade && <div className={s.fadeOut}></div>} {/* Agrega la clase fadeOut cuando fade es verdadero */}
       <div className={s.divCreate}>
@@ -239,6 +241,7 @@ export default function VideogameCreate() {
         </form>
 
       </div>
+    </div>
     </div>
   )
 }
