@@ -12,7 +12,7 @@
   }
   
   .searchButton {
-    color: rgba(0, 0, 0, 0.733);
+    color: rgba(0, 0, 0, 0.579);
     background-color: #00000060;
     border-color: rgba(102, 3, 3, 0.733);
     border: none;
@@ -27,7 +27,15 @@
     border-color: rgb(9, 9, 9);
 }
 
-
+.disabledButton {
+    /* Estilos para el botón desactivado */
+    color: rgba(0, 0, 0, 0.655);
+    background-color: #00000060;
+    border-color: rgba(102, 3, 3, 0.733);
+    opacity: 0.5; /* Por ejemplo, reducir la opacidad del botón desactivado */
+    cursor: not-allowed; /* Cambiar el cursor a "no permitido" cuando el botón esté desactivado */
+    /* ... Agrega tus estilos aquí ... */
+}
 
 /* 
 .formClass {

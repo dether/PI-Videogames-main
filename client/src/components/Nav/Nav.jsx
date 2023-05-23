@@ -10,11 +10,9 @@ export default function Nav() {
     <nav className={s.nav}>
       <Link to="/" className={s.logo}>
         <img
-          src="ruta-del-logo.png"
-          alt="YourGames Logo"
+          src="https://telegra.ph/file/77bc33b751f616902cc8a.png"
           className={s.miniLogo}
         />
-        YourGames
       </Link>
       <div className={s.menu}>
         <Link
@@ -23,13 +21,15 @@ export default function Nav() {
         >
           CREATE
         </Link>
-        <SearchBar/>
-        <Link
-          to="/about"
-          className={location.pathname === "/about" ? s.active : ""}
+      <Link
+        to="/about"
+        className={location.pathname === "/about" ? s.active : ""}
         >
-          About
-        </Link>
+        About
+      </Link>
+      <SearchBar />
+        </div>
+      <div className={s.menu}>
         <Link to="/" className={s.exit}>
           Exit
         </Link>

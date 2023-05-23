@@ -57,7 +57,7 @@
 
 .btn {
   color: rgb(255, 255, 255);
-  background-color: rgba(198, 15, 15, 0.733);
+  background-color: rgba(102, 3, 3, 0.733);
   border-color: rgb(0, 0, 0);
   border-width: 2px;
   border-radius: 10%;
@@ -67,18 +67,14 @@
   font-size: 20px;
 }
 
-/* .btn:hover {
-  color: rgb(240, 235, 245);
-  background-color: rgba(198, 15, 15, 0.733);
-  border-color: rgb(240, 235, 245);
-} */
-
 .disabled {
   background-color: rgb(0, 0, 0);
   border-color: rgb(240, 235, 245);
   color: rgb(240, 235, 245);
   cursor: not-allowed;
 }
+
+
 
 .secondColumn {
   display: flex;
@@ -135,18 +131,6 @@
   margin-top: 5px;
 }
 
-.divLoading{
-  display: flex;
-  align-items: flex-end;
-  flex-direction: column;
-}
-.loading {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  padding-left: 470px;
-  padding-top: 100px;
-}
 
 
 
@@ -186,19 +170,6 @@
       text-align: center;
       margin-left: auto;
       margin-right: auto;
-  }
-
-  .divLoading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 600px; /* Ajusta la altura según tus necesidades */
-    flex-direction: column;
-  }
-  
-  .loading {
-    width: 300px; /* Ajusta el tamaño de la imagen de carga */
-    height: 300px;
   }
 
   .divCards {

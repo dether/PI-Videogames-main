@@ -19,19 +19,28 @@ function handlerSubmit(e) {
     setName("");
 }
 
+const isSearchDisabled = name.trim() === ""; // Verificar si el campo de entrada está vacío o contiene solo espacios en blanco
+
 return (
   <div className={s.searchForm}>
-      <form onSubmit={(e) => handlerSubmit(e)}>
-          <input
+      <form onSubmit={handlerSubmit}>
+        <input
           type="text"
           placeholder="Search a videogame..."
           value={name}
-          onChange={(e) => handlerChange(e)}
+          onChange={handlerChange}
           className={s.searchInput}
-          />
+        />
 
-          <button type="submit" className={s.searchButton}>Search</button>
+        <button
+          type="submit"
+          className={`${s.searchButton} ${isSearchDisabled ? s.disabledButton : ""}`}
+          disabled={isSearchDisabled}
+        >
+          Search
+        </button>
       </form>
+
       
   </div>
 )

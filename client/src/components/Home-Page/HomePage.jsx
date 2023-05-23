@@ -5,13 +5,13 @@ import {
   filterByGenres, filterByCreated,
   orderByName, orderByRating
 } from '../../redux/actions';
-import { Link } from "react-router-dom";
 import Card from '../Card/Card';
 import Filters from '../Filters/Filters';
 import OrderBy from '../OrderBy/OrderBy';
 import Nav from '../Nav/Nav';
 import Pagination from "../Pagination/Pagination";
 import s from "./HomePage.module.css"
+import Loading from '../Loading/Loading';
 
 export default function HomePage() {
   const dispatch = useDispatch();
@@ -27,6 +27,7 @@ export default function HomePage() {
   const [fade, setFade] = useState(true);
   const [isResetDisabled, setIsResetDisabled] = useState(true); // Estado para controlar si el botón de reset está habilitado o no
 
+
   const indexOfLastVideogame = currentPage * videogamesPerPage; // 15
   const indexOfFirstVideogame = indexOfLastVideogame - videogamesPerPage; // 0
   //Videojuegos que estan en la pagina actual
@@ -40,12 +41,12 @@ export default function HomePage() {
   const [ratingchange, setRatingchange] = useState('');
   const [genrechange, setGenrechange] = useState('');
   const [, setOrder] = useState()
-  
+
   useEffect(() => {
     setTimeout(() => {
       setFade(false); // Desactiva la animación de desvanecimiento después de 5 segundos
-    }, 3000);
-  }, []); 
+    }, 5000);
+  }, []);
 
   const pagination = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -107,17 +108,14 @@ export default function HomePage() {
   }
 
   return (
-     <div>
+    <div>
+      <Loading />
+
       {fade && <div className={s.fadeIn}></div>} {/* Agrega la clase fadeIn cuando fade es verdadero */}
-      {/* Resto del código... */} 
-      <Nav
-        handlerGenres={handlerGenres}
-        handlerCreated={handlerCreated}
-        handlerByName={handlerByName}
-        handlerByRating={handlerByRating}
-      /> //class
-      <p class={s.title}>Filters</p>
+      <Nav/>
+      <p className={s.title}>EL GAMER NO MUERE. RESPAWNEA</p>
       <div className={s.cardsAndFilters}>
+        <Pagination videogamesPerPage={videogamesPerPage} allVideogames={allVideogames.length} pagination={pagination} currentPage={currentPage} />
 
         <div className={s.holi}>
           <button onClick={e => { handleClick(e) }} disabled={isResetDisabled} className={`${s.btn} ${isResetDisabled && s.disabled}`}>
@@ -129,11 +127,10 @@ export default function HomePage() {
 
         <div className={s.containerCards}>
 
-          <Pagination videogamesPerPage={videogamesPerPage} allVideogames={allVideogames.length} pagination={pagination} currentPage={currentPage} />
-
           <div className={s.home}>
 
-            { currentVideogames.length > 0 ?
+
+            {currentVideogames.length > 0 ?
               <div className={s.containerCards}>
                 {currentVideogames.map(el => {
                   return (
@@ -144,20 +141,12 @@ export default function HomePage() {
                 })}
               </div>
               :
-              <div className={s.divLoading}>
-                <img
-                  className={s.loading}
-                  src="https://i.pinimg.com/originals/db/f2/55/dbf255f9f7ba73f466e9129fc698d779.gif"
-                  alt="Loading..."
-                />
-                <h1 className={s.title}>Loading...</h1>
-
-              </div>}
-
+              <Loading />
+            }
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
