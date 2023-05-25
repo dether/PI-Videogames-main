@@ -10,6 +10,7 @@ export default function VideogameCreate() {
   const navigate = useNavigate();
   const genres = useSelector((state) => state.genres);
   const [fade, setFade] = useState(false);
+  
 
   const platformsApi = [
     "PC", "PlayStation 5", "PlayStation 4", "PlayStation 3", "Xbox One", "Xbox Series S/X", "Xbox 360", "Xbox",
@@ -94,13 +95,11 @@ export default function VideogameCreate() {
 
 
 
-
-
   return (
     <div>
     <Nav/>
     <div className={s.divGeneral}>
-{fade && <div className={s.fadeOut}></div>} {/* Agrega la clase fadeOut cuando fade es verdadero */}
+{fade && <div className={s.fadeOut}></div>} 
       <div className={s.divCreate}>
 
         <h1 className={s.title}>New Game</h1>

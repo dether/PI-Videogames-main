@@ -11,7 +11,7 @@ function reducer (state = initialState, action) {
         return {
             ...state,
             videogames: action.payload,
-            allVideogames: action.payload 
+            allVideogames: action.payload
         }
 
     case 'GET_GENRES':

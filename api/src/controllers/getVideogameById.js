@@ -48,7 +48,8 @@ const getVideogameById = async function (req, res) {
     const { id } = req.params;
 
     const getAllVideogamesById = async (id) => {
-
+//isNaN("string") //devuelve true
+//isNaN(12) //devuelve false
       if (isNaN(id)) {
           const dbInfoById = await getDbInfoById(id);
           return dbInfoById;

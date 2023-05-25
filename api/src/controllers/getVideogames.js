@@ -34,6 +34,7 @@ const getApiInfo = async function () {
           rating: v.rating.toFixed(2),
           genres: v.genres.map((g) => g.name),
           screenshots: v.short_screenshots,
+          platform: v.parent_platforms.map((g) => g.platform)
         });
       });
     });

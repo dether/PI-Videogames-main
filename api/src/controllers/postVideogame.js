@@ -11,7 +11,7 @@ const postVideogame = async function (req, res) {
     },
   });
 
-  if (name && description && platforms) {
+  if (name && description && platforms && rating && platforms && image && released) {
     let newVideogame = await Videogame.create({
       name,
       description,
@@ -23,6 +23,7 @@ const postVideogame = async function (req, res) {
 
     newVideogame.addGenres(getDbInfoGenres);
     return res.status(200).send('Videogame created successfully');
+    
   }
   } catch (error) {
     res.status(404).send(error)

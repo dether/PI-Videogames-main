@@ -6,7 +6,7 @@ const fs = require('fs');
 // Importamos el módulo path para manejar rutas de archivos y directorios
 const path = require('path');
 // Obtenemos las variables de entorno para la conexión a la base de datos
-const { DB_USER, DB_PASSWORD, DB_HOST,} = process.env;
+const { DB_USER, DB_PASSWORD, DB_HOST,} = process.env; //variable de entorno ".env" para el desarrollo
 
 // Creamos una instancia de Sequelize para la conexión a la base de datos
 const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/videogames`, {

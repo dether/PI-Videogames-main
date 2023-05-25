@@ -18,7 +18,6 @@ function App() {
         <Route path="/videogames" element={<VideogameCreate />} />
         <Route path='/about' element={<About/>} />
         <Route path="/videogame/:id" element={<CardDetail />}/>
-
       </Routes>
     </div>
     </>

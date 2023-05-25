@@ -30,13 +30,14 @@ export default function HomePage() {
   const [isResetDisabled, setIsResetDisabled] = useState(true);
 
   const indexOfLastVideogame = currentPage * videogamesPerPage; // 15
-  const indexOfFirstVideogame = indexOfLastVideogame - videogamesPerPage ; // 0
+  const indexOfFirstVideogame = indexOfLastVideogame - videogamesPerPage; // 0
 
   // Games que estan en la pagina actual
   const currentVideogames = allVideogames.slice(
     indexOfFirstVideogame,
     indexOfLastVideogame
   );
+console.log(currentVideogames);
 
   const [source, setSource] = useState("All");
   const [namechange, setNamechange] = useState('');
@@ -137,7 +138,7 @@ export default function HomePage() {
                 {currentVideogames.map(el => {
                   return (
                     <div key={el.id}>
-                      <Card name={el.name} genres={el.genres} image={el.image ? el.image : "img not found"} rating={el.rating} id={el.id}/>
+                      <Card name={el.name} genres={el.genres} image={el.image ? el.image : "img not found"} rating={el.rating} id={el.id} />
                     </div>
                   );
                 })}
