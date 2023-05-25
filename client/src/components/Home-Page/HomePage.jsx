@@ -37,7 +37,6 @@ export default function HomePage() {
     indexOfFirstVideogame,
     indexOfLastVideogame
   );
-console.log(currentVideogames);
 
   const [source, setSource] = useState("All");
   const [namechange, setNamechange] = useState('');
