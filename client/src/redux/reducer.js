@@ -30,7 +30,7 @@ function reducer (state = initialState, action) {
     
     case 'FILTER_CREATED':
         const allVideogames2 = state.allVideogames;
-        const filteredCreation = action.payload === 'Created' ? allVideogames2.filter(el => el.createdInDb) : allVideogames2.filter(el => !el.createdInDb);
+        const filteredCreation = action.payload === 'DB' ? allVideogames2.filter(el => el.createdInDb) : allVideogames2.filter(el => !el.createdInDb);
 
         return {
             ...state,

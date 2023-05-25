@@ -20,17 +20,19 @@ export default function HomePage() {
 
   //Defino estados locales
   const [currentPage, setCurrentPage] = useState(1);
-  const [videogamesPerPage /*setVideogamesPerPage*/] = useState(15);
+  const [videogamesPerPage, setVideogamesPerPage] = useState(15);
   const [reset, setReset] = useState(false);
   const [orderBy, setOrderBy] = useState("");
   const [filters, setFilters] = useState({});
   const [fade, setFade] = useState(true);
-  const [isResetDisabled, setIsResetDisabled] = useState(true); // Estado para controlar si el botón de reset está habilitado o no
 
+  // Para controlar si el botón de reset está habilitado o no
+  const [isResetDisabled, setIsResetDisabled] = useState(true);
 
   const indexOfLastVideogame = currentPage * videogamesPerPage; // 15
-  const indexOfFirstVideogame = indexOfLastVideogame - videogamesPerPage; // 0
-  //Videojuegos que estan en la pagina actual
+  const indexOfFirstVideogame = indexOfLastVideogame - videogamesPerPage ; // 0
+
+  // Games que estan en la pagina actual
   const currentVideogames = allVideogames.slice(
     indexOfFirstVideogame,
     indexOfLastVideogame
@@ -44,10 +46,10 @@ export default function HomePage() {
 
   useEffect(() => {
     setTimeout(() => {
-      setFade(false); // Desactiva la animación de desvanecimiento después de 5 segundos
+      setFade(false); // Desactiva la animación de desvanecimiento después de x segundos
     }, 2500);
   }, []);
-
+  
   const pagination = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
@@ -56,7 +58,7 @@ export default function HomePage() {
     dispatch(getVideogames());
   }, [dispatch]);
 
-
+// reset
   function handleClick(e) {
     e.preventDefault();
     dispatch(getVideogames());
@@ -66,7 +68,7 @@ export default function HomePage() {
     setGenrechange("");
     setCurrentPage(1);
     setSource("All");
-    setIsResetDisabled(true); // Deshabilitar el botón de reset nuevamente
+    setIsResetDisabled(true); // Deshabilita el botón de reset nuevamente
   }
 
   function handlerGenres(e) {
@@ -113,7 +115,7 @@ export default function HomePage() {
 
       {fade && <div className={s.fadeIn}></div>} {/* Agrega la clase fadeIn cuando fade es verdadero */}
       <Nav/>
-      <p className={s.title}>EL GAMER NO MUERE. RESPAWNEA</p>
+      <p className={s.title}>THE GAMER DOES NOT DIE. RESPAWNEA</p>
       <div className={s.cardsAndFilters}>
         <Pagination videogamesPerPage={videogamesPerPage} allVideogames={allVideogames.length} pagination={pagination} currentPage={currentPage} />
 
@@ -135,7 +137,7 @@ export default function HomePage() {
                 {currentVideogames.map(el => {
                   return (
                     <div key={el.id}>
-                      <Card name={el.name} genres={el.genres} image={el.image ? el.image : "imgDefault"} rating={el.rating} id={el.id} createdInDb={el.createdInDb} screenshots={el.screenshots}/>
+                      <Card name={el.name} genres={el.genres} image={el.image ? el.image : "img not found"} rating={el.rating} id={el.id}/>
                     </div>
                   );
                 })}

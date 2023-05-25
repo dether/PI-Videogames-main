@@ -47,7 +47,7 @@ const getVideogameById = async function (req, res) {
   try {
     const { id } = req.params;
 
-    const getAllVideogamesById = async function(id) {
+    const getAllVideogamesById = async (id) => {
 
       if (isNaN(id)) {
           const dbInfoById = await getDbInfoById(id);

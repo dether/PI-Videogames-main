@@ -2,23 +2,12 @@ import React from "react";
 import s from "./Card.module.css"
 import { deleteVideogame } from "../../redux/actions";
 import { getVideogames } from "../../redux/actions";
-import { useDispatch } from "react-redux";
+import Loading from "../Loading/Loading";
 import { Link } from "react-router-dom";
- 
-export default function Card({ name, genres, image, rating, id, createdInDb }) {
-  let dispatch = useDispatch();
 
-  function handleClickDelete(id) {
-    const result = window.confirm('Are you sure? You won\'t be able to revert this.');
+export default function Card({ name, genres, image, rating, id }) {
 
-    if (result) {
-      alert('Deleted! Your videogame has been deleted.');
-      dispatch(deleteVideogame(id));
-      dispatch(getVideogames());
-    } else {
-      alert('Cancelled. Your videogame is safe :)');
-    }
-  }
+
   return (
     <div className={s.cards_item}>
       <div className={s.card}>
@@ -40,14 +29,6 @@ export default function Card({ name, genres, image, rating, id, createdInDb }) {
           }>
             ⭐{rating}
           </p>
-        </div>
-
-        <div>
-          {
-            createdInDb === true ?
-              <button className={s.btnDelete} onClick={() => handleClickDelete(id)}>X</button>
-              : undefined
-          }
         </div>
 
       </div>

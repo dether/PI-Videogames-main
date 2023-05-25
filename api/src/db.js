@@ -1,6 +1,6 @@
 //Importamos el módulo dotenv para cargar las variables de entorno desde el archivo .env
 require('dotenv').config();
-const { Sequelize } = require('sequelize');
+const { Sequelize, DataTypes } = require('sequelize');
 // Importamos el módulo fs para trabajar con el sistema de archivos
 const fs = require('fs');
 // Importamos el módulo path para manejar rutas de archivos y directorios

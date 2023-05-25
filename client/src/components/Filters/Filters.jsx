@@ -21,7 +21,9 @@ export default function Filters({ handlerGenres, handlerCreated, source, genrech
 
         <div className={s.divSource2}>
           <button style={source === "All" ? { backgroundColor: "#981515", color: "white", borderColor: "white" } : undefined} className={s.source} onClick={() => handlerCreated('All')} >ALL</button>
-          <button style={source === "Created" ? { backgroundColor: "#981515", color: "white", borderColor: "white" } : undefined} className={s.source} onClick={() => handlerCreated('Created')}>CREATED</button>
+
+          <button style={source === "DB" ? { backgroundColor: "#981515", color: "white", borderColor: "white" } : undefined} className={s.source} onClick={() => handlerCreated('DB')}>DB</button>
+
           <button style={source === "Api" ? { backgroundColor: "#981515", color: "white", borderColor: "white" } : undefined} className={s.source} onClick={() => handlerCreated('Api')}>API</button>
         </div>
       </div>

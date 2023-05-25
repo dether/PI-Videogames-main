@@ -5,6 +5,7 @@ module.exports = (sequelize) => {
   sequelize.define('genre', {
     name: {
       type: DataTypes.STRING, // El tipo de dato es una cadena de texto.
+      allowNull: true,
     },
   },
   {

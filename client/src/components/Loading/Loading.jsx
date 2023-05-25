@@ -27,7 +27,8 @@ export default function Loading() {
                         <h1 className={s.title}>Loading...</h1>
                     </div>
                 </div>
-            ) : null}
+            ) : null
+            }
         </div>
     )
 }

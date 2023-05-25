@@ -157,7 +157,7 @@ export default function VideogameCreate() {
             <div className={s.secondColumn}>
 
               <div>
-                <label>Released: <br></br></label>
+                <label>📆 Release Date: <br></br></label>
                 <input
                   type="date"
                   value={input.released}
@@ -214,7 +214,7 @@ export default function VideogameCreate() {
               <br></br>
 
               <div>
-                <label>Genres: <br></br></label>
+                <label>🎭 Genres: <br></br></label>
                 <select className={s.selectGenres} onChange={(e) => { handlerSelectGenres(e) }}>
                   <option value="">Choose 1 or more</option>
                   {

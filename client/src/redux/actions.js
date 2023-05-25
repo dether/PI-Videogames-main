@@ -62,13 +62,12 @@ export function postVideogames(payload) {
 
 export const deleteVideogame = (id) => {
     return function() {
-        axios.get(`${baseURL}/videogames/${id}`)
+        axios.delete(`${baseURL}/videogames/${id}`)
             .then(response => {
                 return response
             })
     }  
 }
-
 
 export function getGenres() {
     return function(dispatch) {

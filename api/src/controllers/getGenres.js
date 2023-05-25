@@ -10,6 +10,7 @@ const getGenres = async function (req, res) {
     const urlData = await axios.get(
       `${API_URL}/genres?key=${API_KEY}`
     );
+
     urlData.data.results.forEach(v => {
       gamesData.push({
         id: v.id,
@@ -29,8 +30,9 @@ const getGenres = async function (req, res) {
     const getDbInfoGenres = await Genre.findAll();
 
     res.send(getDbInfoGenres);
+    
   } catch (error) {
-    console.error("Error:", error);
+    /* console.error("Error:", error); */
     res.status(500).send("Internal Server Error");
   }
 };

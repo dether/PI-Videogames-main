@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { getVideogameById, clearVideogame } from "../../redux/actions";
 import s from "./CardDetail.module.css"
+import Loading from "../Loading/Loading";
 
 
 export default function CardDetail() {
@@ -56,15 +57,7 @@ export default function CardDetail() {
 
             </div> 
             :  
-            <div className={s.divLoading}>
-                <img
-                  className={s.loading}
-                  src="https://i.pinimg.com/originals/db/f2/55/dbf255f9f7ba73f466e9129fc698d779.gif"
-                  alt="Loading..."
-                />
-                    <h1 className={s.title}>Loading...</h1>
-
-                </div>
+            <Loading/>
         }
     </div>
 )
